@@ -9,7 +9,9 @@ export default function SegmentPicker({ onChange }) {
     setSegmentPickerState(event.target.value);
     try {
       onChange(event);
-    } catch {}
+    } catch {
+      Math.random();
+    }
   };
   return (
     <div className={style.segment_picker} onChange={segmentPickerHandler}>

@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 import React from "react";
 import propTypes from "prop-types";
 import style from "./SegmentPicker.module.scss";
