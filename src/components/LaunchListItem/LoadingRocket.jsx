@@ -1,11 +1,11 @@
 import React from "react";
 import rocket from "../../icons/roket.svg";
-import "./LoadingRocket.scss";
+import style from "./LoadingRocket.module.scss";
 
 export default function LoadingRocket() {
   return (
-    <span className="rocket">
-      <img src={rocket} alt="" className="rocket-icon" />
+    <span className={style.rocket}>
+      <img src={rocket} alt="" className={style.rocket_icon} />
     </span>
   );
 }

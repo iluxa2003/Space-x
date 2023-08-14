@@ -11,7 +11,6 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
     "sass": "^1.64.1",
     "scss": "^0.2.4",
     "storybook": "^7.1.1",
@@ -20,6 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "stylelint": "npx stylelint \"**/*.scss\"",
+    "chromatic":"npx chromatic --project-token=243c808ce0b6",
     "eslint": "npx eslint \"**/*.jsx\"",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -2,13 +2,13 @@
   position: relative;
   color: #7959a9;
 
-  &-top_menu {
+  &_top_menu {
     display: flex;
     justify-content: space-between;
     padding: 5px 16px;
     background-color: #7959a9;
 
-    &_icon-button {
+    &_icon_button {
       border: 0;
       background-color: #7959a9;
 
@@ -19,7 +19,7 @@
     }
   }
 
-  &-mobile_menu {
+  &_mobile_menu {
     position: absolute;
     left: 0;
     top: 100%;
@@ -31,7 +31,7 @@
     height: 90vh;
     background-color: #e8e7f8;
 
-    &-list {
+    &_list {
       &_items {
         padding: 10px 5px 0;
       }
@@ -41,32 +41,32 @@
       display: none;
     }
   }
+
+  &_footer {
+    padding: 16px;
+
+    &_text {
+      text-align: center;
+      color: #51416e;
+    }
+
+    &_icons_wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    &_icon {
+      padding: 10px 10px 0;
+      width: 34px;
+      height: 34px;
+      filter: invert(39%) sepia(18%) saturate(1559%) hue-rotate(222deg)
+        brightness(93%) contrast(85%);
+    }
+  }
 }
 
 .line {
   margin-top: 4px;
   height: 1px;
   background-color: #c0b9e8;
-}
-
-.navbar-footer {
-  padding: 16px;
-
-  &_text {
-    text-align: center;
-    color: #51416e;
-  }
-
-  &_icons-wrapper {
-    display: flex;
-    justify-content: center;
-  }
-
-  &_icon {
-    padding: 10px 10px 0;
-    width: 34px;
-    height: 34px;
-    filter: invert(39%) sepia(18%) saturate(1559%) hue-rotate(222deg)
-      brightness(93%) contrast(85%);
-  }
 }
