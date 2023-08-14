@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "stylelint": "npx stylelint \"**/*.scss\"",
-    "chromatic":"npx chromatic --project-token=243c808ce0b6",
+    "chromatic": "npx chromatic --project-token=243c808ce0b6",
     "eslint": "npx eslint \"**/*.jsx\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -59,6 +59,7 @@
     "babel-plugin-named-exports-order": "^0.0.2",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-react": "^7.33.0",
     "eslint-plugin-storybook": "^0.6.13",
