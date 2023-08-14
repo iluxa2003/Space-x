@@ -1,6 +1,7 @@
 # .github/workflows/chromatic.yml
 
 # Other configuration required
+on: push
 
 jobs:
   chromatic-deployment:
@@ -11,9 +12,9 @@ jobs:
         with:
           fetch-depth: 0 # 👈 Required to retrieve git history
       - name: Install dependencies
-        # 👇 Install dependencies with the same package manager used in the project (replace it as needed), e.g. yarn, npm, pnpm
-        run: yarn
-        # 👇 Adds Chromatic as a step in the workflow
+        run: |
+          npm install
+          npm run chromatic
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         # Options required to the GitHub Chromatic Action
