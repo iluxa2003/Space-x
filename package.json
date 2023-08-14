@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "stylelint": "npx stylelint \"**/*.scss\"",
-    "chromatic": "npx chromatic --project-token=chpt_5eb40f284181bf7",
+    "chromatic": "chromatic --project-token=chpt_5eb40f284181bf7",
     "eslint": "npx eslint \"**/*.jsx\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
