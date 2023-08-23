@@ -2,7 +2,7 @@ name: NodeJS with Webpack
 
 on:
   push:
-    branches: ["feature_full-storybook"]
+    branches: ["feature/full-storybook"]
   pull_request:
     branches: ["develop"]
 
