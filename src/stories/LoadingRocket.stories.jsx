@@ -1,8 +1,8 @@
-import React from "react";
-import LoadingRocket from "../components/LaunchListItem/LoadingRocket";
+import React from 'react';
+import LoadingRocket from '../components/LaunchListItem/LoadingRocket';
 
 export default {
-  title: "LoadingRocket",
+  title: 'LoadingRocket',
   component: LoadingRocket,
 };
 

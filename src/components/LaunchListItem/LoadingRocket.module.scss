@@ -1,14 +1,16 @@
-.rocket {
+@import '../../variables';
+
+.root {
   display: inline-block;
   margin-left: 10px;
   border-radius: 5px;
   padding: 10px;
   width: 80px;
   height: 80px;
-  background-color: #51416e;
+  background-color: $--color-ebony-900;
+}
 
-  &_icon {
-    width: 80px;
-    height: 80px;
-  }
+.icon {
+  width: 80px;
+  height: 80px;
 }

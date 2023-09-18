@@ -1,8 +1,8 @@
-import React from "react";
-import YearLine from "../components/YearLine/YearLine";
+import React from 'react';
+import YearLine from '../components/YearLine/YearLine';
 
 export default {
-  title: "YearLine",
+  title: 'YearLine',
   component: YearLine,
 };
 

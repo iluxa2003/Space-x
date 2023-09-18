@@ -1,8 +1,8 @@
-import React from "react";
-import LaunchListItem from "../components/LaunchListItem/LaunchListItem";
+import React from 'react';
+import LaunchListItem from '../components/LaunchListItem/LaunchListItem';
 
 export default {
-  title: "LaunchListItem",
+  title: 'LaunchListItem',
   component: LaunchListItem,
 };
 
@@ -15,15 +15,15 @@ LaunchListItemDefault.args = {};
 
 export const LaunchListItemSuccess = Template.bind({});
 LaunchListItemSuccess.args = {
-  status: "success",
+  status: 'success',
 };
 
 export const LaunchListItemFailed = Template.bind({});
 LaunchListItemFailed.args = {
-  status: "failed",
+  status: 'failed',
 };
 
 export const LaunchListItemUpcoming = Template.bind({});
 LaunchListItemUpcoming.args = {
-  status: "upcoming",
+  status: 'upcoming',
 };

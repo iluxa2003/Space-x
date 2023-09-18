@@ -1,69 +1,57 @@
-.launch {
-  &_list_item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
-    border-radius: 3px;
-    width: 360px;
-    height: 120px;
-    color: #fff;
-    background-color: #181320;
+@import '../../variables';
 
-    &_working_icon {
-      margin-left: 10px;
-      width: 100px;
-      height: 100px;
-    }
+.root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  border-radius: 3px;
+  width: 360px;
+  height: 120px;
+  color: $--color-white;
+  background-color: $--color-ebony-950;
 
-    &_figcaption {
-      width: 203px;
-      height: 88px;
-
-      h2 {
-        margin-top: 0;
-      }
-    }
-
-    &_icon_arrow {
-      width: 22px;
-      height: 22px;
-    }
-
-    &_date {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .light {
-      &_grey {
-        color: #d7d4f1;
-      }
-    }
-
-    .dark {
-      &_grey {
-        color: #ab9cdd;
-      }
-    }
-
-    &:hover {
-      background-color: #2e233f;
-    }
+  &:hover {
+    background-color: $--color-ebony-910;
   }
 }
 
-.text {
-  &_success {
-    color: #d9ffe2;
-  }
+.itemDate {
+  display: flex;
+  justify-content: space-between;
+}
 
-  &_failed {
-    color: #fdcbcb;
-  }
+.icon {
+  margin-left: 10px;
+  width: 100px;
+  height: 100px;
+}
 
-  &_upcoming {
-    color: #94b8fc;
+.iconArrow {
+  margin-right: 5px;
+  width: 22px;
+  height: 22px;
+
+  path {
+    width: 22px;
+    height: 22px;
   }
+}
+
+.figcaption {
+  width: 203px;
+  height: 88px;
+}
+
+.title {
+  margin-top: 0;
+}
+
+.date {
+  color: $--color-ebony-400;
+}
+
+.rocket {
+  color: $--color-ebony-200;
 }

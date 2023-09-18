@@ -1,0 +1,15 @@
+@import '../../variables';
+
+.text {
+  &_success {
+    color: $--color-apple-100;
+  }
+
+  &_failed {
+    color: $--color-cinnabar-200;
+  }
+
+  &_upcoming {
+    color: $--color-cerulean-blue-300;
+  }
+}

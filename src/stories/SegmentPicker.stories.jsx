@@ -1,8 +1,8 @@
-import React from "react";
-import SegmentPicker from "../components/SegmentPicker/SegmentPicker";
+import React from 'react';
+import SegmentPicker from '../components/SegmentPicker/SegmentPicker';
 
 export default {
-  title: "SegmentPicker",
+  title: 'SegmentPicker',
   component: SegmentPicker,
 };
 

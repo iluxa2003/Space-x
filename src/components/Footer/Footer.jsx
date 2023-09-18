@@ -1,18 +1,18 @@
-import React from "react";
-import instagram from "../../icons/instagram.svg";
-import twitter from "../../icons/twitter.svg";
-import style from "./Footer.module.scss";
+import React from 'react';
+import Instagram from '../../icons/instagram.svg';
+import Twitter from '../../icons/twitter.svg';
+import style from './Footer.module.scss';
 
 export default function Footer() {
   return (
-    <footer className={style.footer}>
-      <div className={style.footer_text}>Follow us</div>
-      <div className={style.footer_icons_wrapper}>
+    <footer className={style.root}>
+      <div className={style.text}>Follow us</div>
+      <div className={style.iconWrapper}>
         <a href="https://www.instagram.com/">
-          <img src={instagram} alt="" className={style.footer_icon} />
+          <Instagram className={style.icon} />
         </a>
         <a href="https://twitter.com/">
-          <img src={twitter} alt="" className={style.footer_icon} />
+          <Twitter className={style.icon} />
         </a>
       </div>
     </footer>

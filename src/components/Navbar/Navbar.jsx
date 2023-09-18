@@ -1,63 +1,67 @@
-import { React, useState } from "react";
-import style from "./Navbar.module.scss";
-import logo from "../../icons/spaceXLogo.svg";
-import close from "../../icons/close.svg";
-import busher from "../../icons/burher.svg";
-import instagram from "../../icons/instagram.svg";
-import twitter from "../../icons/twitter.svg";
+import React, { useState } from 'react';
+import style from './Navbar.module.scss';
+import Logo from '../../icons/spaceXLogo.svg';
+import Close from '../../icons/close.svg';
+import Busher from '../../icons/burher.svg';
+import Instagram from '../../icons/instagram.svg';
+import Twitter from '../../icons/twitter.svg';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <navbar className={style.navbar}>
-      <div className={style.navbar_top_menu}>
-        <img src={logo} alt="" className="" />
+    <div className={style.root}>
+      <div className={style.topMenu}>
+        <Logo className="" />
         <button
-          className={style.navbar_top_menu_icon_button}
+          className={style.iconButton}
           type="button"
           onClick={() => {
             setOpen((state) => !state);
           }}
         >
-          <img src={open ? close : busher} alt="" className={style.icon} />
+          {open ? (
+            <Close className={style.icon} />
+          ) : (
+            <Busher className={style.icon} />
+          )}
         </button>
       </div>
-      <div className={`${style.navbar_mobile_menu} ${open ? "" : style.closed}`}>
-        <div className={style.navbar_mobile_menu_list}>
-          <div className={style.navbar_mobile_menu_list_items}>
+      <div className={`${style.mobileMenu} ${open ? '' : style.closed}`}>
+        <div>
+          <div className={style.listItem}>
             Launches
             <div className={style.line} />
           </div>
-          <div className={style.navbar_mobile_menu_list_items}>
+          <div className={style.listItem}>
             Rockets
             <div className={style.line} />
           </div>
-          <div className={style.navbar_mobile_menu_list_items}>
+          <div className={style.listItem}>
             Launchpads
             <div className={style.line} />
           </div>
-          <div className={style.navbar_mobile_menu_list_items}>
+          <div className={style.listItem}>
             About us
             <div className={style.line} />
           </div>
-          <div className={style.navbar_mobile_menu_list_items}>
+          <div className={style.listItem}>
             Contact Us
             <div className={style.line} />
           </div>
         </div>
-        <footer className={style.navbar_footer}>
-          <div className={style.navbar_footer_text}>Follow us</div>
-          <div className={style.navbar_footer_icons_wrapper}>
+        <footer className={style.footer}>
+          <div className={style.footerText}>Follow us</div>
+          <div className={style.footerWrapper}>
             <a href="https://www.instagram.com/">
-              <img src={instagram} alt="" className={style.navbar_footer_icon} />
+              <Instagram className={style.icon} />
             </a>
             <a href="https://twitter.com/">
-              <img src={twitter} alt="" className={style.navbar_footer_icon} />
+              <Twitter className={style.icon} />
             </a>
           </div>
         </footer>
       </div>
       <div />
-    </navbar>
+    </div>
   );
 }

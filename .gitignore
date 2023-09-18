@@ -6,7 +6,8 @@
 .pnp.js
 # testing
 /coverage
-
+CHROMATIC_PROJECT_TOKEN
+build-storybook.log
 # production
 /build
 
