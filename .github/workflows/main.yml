@@ -16,7 +16,7 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version-file: '../.nvmrc'
+          node-version-file:  {{ contents(.nvmrc) }}
 
       - name: Build
         run: |
