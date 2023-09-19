@@ -7,11 +7,11 @@
 # testing
 /coverage
 CHROMATIC_PROJECT_TOKEN
-build-storybook.log
 # production
 /build
 
 # misc
+build-storybook.log
 .DS_Store
 .env.local
 .env.development.local
