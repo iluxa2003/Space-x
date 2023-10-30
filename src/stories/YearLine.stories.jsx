@@ -11,4 +11,6 @@ function Template(args) {
 }
 
 export const YearLineDef = Template.bind({});
-YearLineDef.args = {};
+YearLineDef.args = {
+  year: 2022,
+};

@@ -4,14 +4,18 @@ import propTypes from 'prop-types';
 import style from './SegmentPickerItem.module.scss';
 
 export default function SegmentPickerItem({
-  name = '',
-  value = '',
+  name,
+  value,
   checked = false,
-  children = '',
+  children,
 }) {
   const id = Math.random();
   return (
-    <div className={style.root} key={Math.random()}>
+    <label
+      htmlFor={id}
+      className={`${style.root} ${checked && style.line}`}
+      key={Math.random()}
+    >
       <input
         type="radio"
         id={id}
@@ -19,17 +23,14 @@ export default function SegmentPickerItem({
         value={value}
         defaultChecked={checked}
       />
-
-      <label htmlFor={id}>
-        {children}
-        {checked && <div className={style.line} />}
-      </label>
-    </div>
+      {children}
+    </label>
   );
 }
 SegmentPickerItem.propTypes = {
-  name: propTypes.string,
-  value: propTypes.string,
+  name: propTypes.string.isRequired,
+  value: propTypes.string.isRequired,
   checked: propTypes.bool,
-  children: propTypes.oneOfType([propTypes.string, propTypes.object]),
+  children: propTypes.oneOfType([propTypes.string, propTypes.object])
+    .isRequired,
 };

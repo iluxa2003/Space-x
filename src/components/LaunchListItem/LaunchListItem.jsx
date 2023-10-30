@@ -1,37 +1,45 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import propTypes from 'prop-types';
 import ArrowRight from '../../icons/arrowRight.svg';
-import LoadingRocket from './LoadingRocket';
 import style from './LaunchListItem.module.scss';
 import LaunchListStatus from './LaunchListStatus';
 
+import launchPlaceholderSrc from '../../img/rocketWithBG.png';
+
 export default function LaunchListItem({
-  image = '',
-  status = 'success',
-  date = '2022',
+  launchId,
+  image = launchPlaceholderSrc,
+  status,
+  date,
 }) {
   return (
-    <figure className={style.root}>
-      {image === '' ? <LoadingRocket /> : image}
-      <figcaption className={style.figcaption}>
-        <h2 className={style.title}>FalconSat</h2>
-        <div>
-          <div className={style.rocket}>Rocket Falcon 9</div>
-          <div className={style.itemDate}>
-            <LaunchListStatus status={status} />
-            <span className={style.date}>{date}</span>
-          </div>
+    <Link to={`/launches/${launchId}`} className={style.link}>
+      <figure className={style.root}>
+        <div className={style.leftSide}>
+          <img src={image} alt="" className={style.image} />
+          <figcaption className={style.figcaption}>
+            <h2 className={style.title}>FalconSat</h2>
+            <div>
+              <div className={style.rocket}>Rocket Falcon 9</div>
+              <div className={style.itemDate}>
+                <LaunchListStatus status={status} />
+                <span className={style.date}>{date}</span>
+              </div>
+            </div>
+          </figcaption>
         </div>
-      </figcaption>
-      <span>
-        <ArrowRight className={style.iconArrow} />
-      </span>
-    </figure>
+        <span>
+          <ArrowRight className={style.iconArrow} />
+        </span>
+      </figure>
+    </Link>
   );
 }
 
 LaunchListItem.propTypes = {
-  image: propTypes.element,
-  status: propTypes.oneOf(['success', 'failed', 'upcoming']),
-  date: propTypes.string,
+  launchId: propTypes.string.isRequired,
+  image: propTypes.string,
+  status: propTypes.oneOf(['success', 'failed', 'upcoming']).isRequired,
+  date: propTypes.string.isRequired,
 };

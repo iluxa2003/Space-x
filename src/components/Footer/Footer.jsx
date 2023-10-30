@@ -8,10 +8,10 @@ export default function Footer() {
     <footer className={style.root}>
       <div className={style.text}>Follow us</div>
       <div className={style.iconWrapper}>
-        <a href="https://www.instagram.com/">
+        <a href="https://www.instagram.com/" className={style.link}>
           <Instagram className={style.icon} />
         </a>
-        <a href="https://twitter.com/">
+        <a href="https://twitter.com/" className={style.link}>
           <Twitter className={style.icon} />
         </a>
       </div>

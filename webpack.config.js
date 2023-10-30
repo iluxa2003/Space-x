@@ -10,12 +10,12 @@ module.exports = {
     port: 3030,
   },
   output: {
-    path: path.join(__dirname, '/dist'),
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'public/index.html',
+      template: 'src/index.html',
     }),
   ],
   resolve: {
@@ -41,6 +41,14 @@ module.exports = {
         test: /\.svg$/i,
         issuer: /\.[jt]sx?$/,
         use: ['@svgr/webpack'],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
       },
     ],
   },

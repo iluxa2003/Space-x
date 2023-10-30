@@ -1,15 +1,15 @@
-@import '../../variables';
+@use '../../variables' as *;
 
 .text {
-  &_success {
-    color: $--color-apple-100;
+  &Success {
+    color: $color-apple-100;
   }
 
-  &_failed {
-    color: $--color-cinnabar-200;
+  &Failed {
+    color: $color-cinnabar-200;
   }
 
-  &_upcoming {
-    color: $--color-cerulean-blue-300;
+  &Upcoming {
+    color: $color-cerulean-blue-300;
   }
 }

@@ -1,4 +1,4 @@
-@import '../../variables';
+@use '../../variables' as *;
 
 .root {
   display: flex;
@@ -6,15 +6,26 @@
   align-items: center;
   justify-content: space-between;
   margin: 0;
+  margin-bottom: 10px;
   border-radius: 3px;
-  width: 360px;
-  height: 120px;
-  color: $--color-white;
-  background-color: $--color-ebony-950;
+  color: $color-white;
+  background-color: $color-ebony-950;
 
   &:hover {
-    background-color: $--color-ebony-910;
+    background-color: $color-ebony-910;
   }
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: row;
+  padding: 3px;
+  width: 300px;
 }
 
 .itemDate {
@@ -40,8 +51,7 @@
 }
 
 .figcaption {
-  width: 203px;
-  height: 88px;
+  margin: 3px;
 }
 
 .title {
@@ -49,9 +59,13 @@
 }
 
 .date {
-  color: $--color-ebony-400;
+  color: $color-ebony-400;
 }
 
 .rocket {
-  color: $--color-ebony-200;
+  color: $color-ebony-200;
+}
+
+.link {
+  text-decoration: none;
 }

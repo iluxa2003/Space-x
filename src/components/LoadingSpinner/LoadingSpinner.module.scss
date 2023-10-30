@@ -1,6 +1,7 @@
 .root {
   animation: rotator 1.4s linear infinite;
 }
+
 @keyframes rotator {
   0% {
     transform: rotate(0deg);

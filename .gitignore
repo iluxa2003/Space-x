@@ -3,10 +3,6 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
-# testing
-/coverage
-CHROMATIC_PROJECT_TOKEN
 # production
 /build
 

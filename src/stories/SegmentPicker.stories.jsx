@@ -11,4 +11,7 @@ function Template(args) {
 }
 
 export const SegmentPickerDef = Template.bind({});
-SegmentPickerDef.args = {};
+SegmentPickerDef.args = {
+  value: '1',
+  onclick: () => {},
+};

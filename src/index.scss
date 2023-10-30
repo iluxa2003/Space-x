@@ -1,4 +1,4 @@
-@import './variables';
+@use 'variables' as *;
 
 body {
   margin: 0;
@@ -8,5 +8,5 @@ body {
   font-size: 16px;
   line-height: 150%; /* 24px */
   color: white;
-  background: $--color-ebony-950;
+  background: $color-ebony-950;
 }

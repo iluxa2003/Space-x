@@ -1,23 +1,24 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import classNames from 'classnames';
 import style from './LaunchListStatus.module.scss';
 
-export default function LaunchListStatus({ status = 'success' }) {
+export default function LaunchListStatus({ status }) {
   return (
-    <>
-      {status === 'success' && (
-        <span className={style.text_success}>Launched at</span>
-      )}
-      {status === 'upcoming' && (
-        <span className={style.text_upcoming}>Upcoming at</span>
-      )}
-      {status === 'failed' && (
-        <span className={style.text_failed}>Failed at</span>
-      )}
-    </>
+    <span
+      className={classNames({
+        [style.textSuccess]: status === 'success',
+        [style.textUpcoming]: status === 'upcoming',
+        [style.textFailed]: status === 'failed',
+      })}
+    >
+      {status === 'success' && 'Launched at'}
+      {status === 'upcoming' && 'Upcoming at'}
+      {status === 'failed' && 'Failed at'}
+    </span>
   );
 }
 
 LaunchListStatus.propTypes = {
-  status: propTypes.oneOf(['success', 'failed', 'upcoming']),
+  status: propTypes.oneOf(['success', 'failed', 'upcoming']).isRequired,
 };

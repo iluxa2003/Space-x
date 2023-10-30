@@ -3,8 +3,8 @@ import propTypes from 'prop-types';
 import style from './SegmentPicker.module.scss';
 import SegmentPickerItem from './SegmentPickerItem';
 
-export default function SegmentPicker({ onChange = () => {} }) {
-  const [segmentPickerState, setSegmentPickerState] = useState('');
+export default function SegmentPicker({ onChange, value }) {
+  const [segmentPickerState, setSegmentPickerState] = useState(value);
   const segmentPickerHandler = (event) => {
     setSegmentPickerState(event.target.value);
     try {
@@ -13,13 +13,13 @@ export default function SegmentPicker({ onChange = () => {} }) {
       Math.random();
     }
   };
+
   return (
-    <div className={style.root} onChange={segmentPickerHandler}>
+    <div className={style.root} onChangeCapture={segmentPickerHandler}>
       <SegmentPickerItem
         name="state"
         value="1"
         checked={segmentPickerState === '1' && true}
-        key={Math.random()}
       >
         Successful
       </SegmentPickerItem>
@@ -27,7 +27,6 @@ export default function SegmentPicker({ onChange = () => {} }) {
         name="state"
         value="2"
         checked={segmentPickerState === '2' && true}
-        key={Math.random()}
       >
         Upcoming
       </SegmentPickerItem>
@@ -35,13 +34,14 @@ export default function SegmentPicker({ onChange = () => {} }) {
         name="state"
         value="3"
         checked={segmentPickerState === '3' && true}
-        key={Math.random()}
       >
         Failed
       </SegmentPickerItem>
     </div>
   );
 }
+
 SegmentPicker.propTypes = {
-  onChange: propTypes.func,
+  onChange: propTypes.func.isRequired,
+  value: propTypes.oneOf(['1', '2', '3']).isRequired,
 };

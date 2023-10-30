@@ -1,0 +1,8 @@
+@use '../../variables' as *;
+
+.icon {
+  width: 34px;
+  height: 34px;
+  color: $color-white;
+  transition: $transition-100;
+}
