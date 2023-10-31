@@ -6,9 +6,4 @@ export default {
   component: UpButton,
 };
 
-function Template(args) {
-  return <UpButton {...args} />;
-}
-
-export const UpButtonDef = Template.bind({});
-UpButtonDef.args = {};
+export const UpButtonDef = { render: () => <UpButton /> };

@@ -6,9 +6,4 @@ export default {
   component: LoadingSpinner,
 };
 
-function Template(args) {
-  return <LoadingSpinner {...args} />;
-}
-
-export const LoadingSpinnerDef = Template.bind({});
-LoadingSpinnerDef.args = {};
+export const LoadingSpinnerDef = { render: () => <LoadingSpinner /> };

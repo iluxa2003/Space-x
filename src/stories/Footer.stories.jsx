@@ -6,9 +6,4 @@ export default {
   component: Footer,
 };
 
-function Template(args) {
-  return <Footer {...args} />;
-}
-
-export const FooterDef = Template.bind({});
-FooterDef.args = {};
+export const FooterDef = { render: () => <Footer /> };

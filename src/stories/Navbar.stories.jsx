@@ -6,9 +6,4 @@ export default {
   component: Navbar,
 };
 
-function Template(args) {
-  return <Navbar {...args} />;
-}
-
-export const NavbarDef = Template.bind({});
-NavbarDef.args = {};
+export const NavbarDef = { render: () => <Navbar /> };

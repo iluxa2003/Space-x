@@ -1,4 +1,3 @@
-import React from 'react';
 import SegmentPicker from '../components/SegmentPicker/SegmentPicker';
 
 export default {
@@ -6,12 +5,9 @@ export default {
   component: SegmentPicker,
 };
 
-function Template(args) {
-  return <SegmentPicker {...args} />;
-}
-
-export const SegmentPickerDef = Template.bind({});
-SegmentPickerDef.args = {
-  value: '1',
-  onclick: () => {},
+export const SegmentPickerDef = {
+  args: {
+    value: '1',
+    onclick: () => {},
+  },
 };

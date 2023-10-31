@@ -5,7 +5,7 @@
 /.pnp
 # production
 /build
-
+/dist
 # misc
 build-storybook.log
 .DS_Store

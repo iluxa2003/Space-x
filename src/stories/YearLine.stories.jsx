@@ -1,4 +1,3 @@
-import React from 'react';
 import YearLine from '../components/YearLine/YearLine';
 
 export default {
@@ -6,11 +5,8 @@ export default {
   component: YearLine,
 };
 
-function Template(args) {
-  return <YearLine {...args} />;
-}
-
-export const YearLineDef = Template.bind({});
-YearLineDef.args = {
-  year: 2022,
+export const YearLineDef = {
+  args: {
+    year: 2022,
+  },
 };
