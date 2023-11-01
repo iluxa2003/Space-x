@@ -7,20 +7,21 @@ export default function SegmentPickerItem({
   name,
   value,
   checked = false,
+  onChange,
   children,
 }) {
-  const id = Math.random();
   return (
     <label
-      htmlFor={id}
+      htmlFor={value}
       className={`${style.root} ${checked && style.line}`}
-      key={Math.random()}
+      key={value}
     >
       <input
         type="radio"
-        id={id}
+        id={value}
         name={name}
         value={value}
+        onChange={onChange}
         defaultChecked={checked}
       />
       {children}
@@ -31,6 +32,7 @@ SegmentPickerItem.propTypes = {
   name: propTypes.string.isRequired,
   value: propTypes.string.isRequired,
   checked: propTypes.bool,
+  onChange: propTypes.func.isRequired,
   children: propTypes.oneOfType([propTypes.string, propTypes.object])
     .isRequired,
 };

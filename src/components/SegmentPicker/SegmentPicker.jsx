@@ -15,10 +15,11 @@ export default function SegmentPicker({ onChange, value }) {
   };
 
   return (
-    <div className={style.root} onChangeCapture={segmentPickerHandler}>
+    <div className={style.root}>
       <SegmentPickerItem
         name="state"
         value="1"
+        onChange={segmentPickerHandler}
         checked={segmentPickerState === '1' && true}
       >
         Successful
@@ -26,6 +27,7 @@ export default function SegmentPicker({ onChange, value }) {
       <SegmentPickerItem
         name="state"
         value="2"
+        onChange={segmentPickerHandler}
         checked={segmentPickerState === '2' && true}
       >
         Upcoming
@@ -33,6 +35,7 @@ export default function SegmentPicker({ onChange, value }) {
       <SegmentPickerItem
         name="state"
         value="3"
+        onChange={segmentPickerHandler}
         checked={segmentPickerState === '3' && true}
       >
         Failed
