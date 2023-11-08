@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import SegmentPicker from '../components/SegmentPicker/SegmentPicker';
 
 export default {
@@ -6,8 +7,15 @@ export default {
 };
 
 export const SegmentPickerDef = {
-  args: {
-    value: '1',
-    onclick: () => {},
+  render: () => {
+    const [value, setValue] = useState('1');
+    return (
+      <SegmentPicker
+        value={value}
+        onChange={(e) => {
+          setValue(e.target.value);
+        }}
+      />
+    );
   },
 };
