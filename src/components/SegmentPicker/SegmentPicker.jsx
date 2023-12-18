@@ -10,7 +10,7 @@ export default function SegmentPicker({ onChange, value }) {
         name="state"
         value="1"
         onChange={onChange}
-        checked={value === '1' && true}
+        checked={value === '1'}
       >
         Successful
       </SegmentPickerItem>
@@ -18,7 +18,7 @@ export default function SegmentPicker({ onChange, value }) {
         name="state"
         value="2"
         onChange={onChange}
-        checked={value === '2' && true}
+        checked={value === '2'}
       >
         Upcoming
       </SegmentPickerItem>
@@ -26,7 +26,7 @@ export default function SegmentPicker({ onChange, value }) {
         name="state"
         value="3"
         onChange={onChange}
-        checked={value === '3' && true}
+        checked={value === '3'}
       >
         Failed
       </SegmentPickerItem>
