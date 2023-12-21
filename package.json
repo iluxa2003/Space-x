@@ -25,7 +25,7 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "stylelint": "npx stylelint \"**/*.scss\"",
-    "chromatic": "chromatic --project-token CHROMATIC_PROJECT_TOKEN",
+    "chromatic": "chromatic --project-token $CHROMATIC_PROJECT_TOKEN",
     "eslint": "npx eslint \"**/*.jsx\"",
     "build": "webpack --mode production",
     "storybook": "storybook dev -p 6006",
