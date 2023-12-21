@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+.stripped {
+  border: 0;
+  background-color: $color-ebony-700;
+}
+
+.primary {
+  border: 0;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  background-color: $color-fuchsia-600;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-fuchsia-500;
+  }
+
+  &:active {
+    background-color: $color-fuchsia-700;
+  }
+
+  svg {
+    width: 40px;
+    height: 40px;
+    color: $color-white;
+  }
+}

@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px;
+  border: 0;
+  border-radius: 8px;
+  padding: 4px;
+  width: 241px;
+  height: 30px;
+  color: $color-white;
+  background-color: $color-ebony-950;
+
+  label {
+    border-radius: 4px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+  }
+
+  input[type='radio'] {
+    display: none;
+
+    &:checked + label {
+      border-radius: 4px;
+    }
+  }
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: $color-white;
+}

@@ -1,0 +1,71 @@
+@use 'variables' as *;
+
+.root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  color: $color-white;
+  background-color: $color-ebony-950;
+
+  &:hover {
+    background-color: $color-ebony-910;
+  }
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: row;
+  padding: 3px;
+  width: 300px;
+}
+
+.itemDate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  margin-left: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.iconArrow {
+  margin-right: 5px;
+  width: 22px;
+  height: 22px;
+
+  path {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.figcaption {
+  margin: 3px;
+}
+
+.title {
+  margin-top: 0;
+}
+
+.date {
+  color: $color-ebony-400;
+}
+
+.rocket {
+  color: $color-ebony-200;
+}
+
+.link {
+  text-decoration: none;
+}
