@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+.text {
+  &Success {
+    color: $color-apple-100;
+  }
+
+  &Failed {
+    color: $color-cinnabar-200;
+  }
+
+  &Upcoming {
+    color: $color-cerulean-blue-300;
+  }
+}

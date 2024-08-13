@@ -1,0 +1,39 @@
+@use 'variables' as *;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  padding: 31px 0;
+  background-color: $color-ebony-900;
+}
+
+.text {
+  text-align: center;
+  color: $color-ebony-300;
+}
+
+.link {
+  margin-left: $space-100;
+  color: $color-ebony-300;
+  transition: color $transition-100;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-ebony-100;
+  }
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+
+  &Wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
